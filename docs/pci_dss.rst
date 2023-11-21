@@ -19,27 +19,19 @@ core               Financial ledger for the operations,          RoR web-applica
                    and stores the wallet balances
 business-sidekiq   Sidekiq job schedule for business web-service RoR application 
                    controls the change of transaction status
-business_whenever  Service for business_sidekiq queues           RoR application 
-core-whenever      Service for core_sidekiq queues               RoR application 
 core-docs          Public Core API documentation (rst based)     RoR web-application
 flexy-commission   Commission calculation application            Python app
 flexy-comm-admin   Interface to regulate commission rules        Python web-app
 flexy-guard        Payment filtering web-service                 Python app
 flexy-guard-admin  Web interface and admin panel for flexy-guard Python web-app 
 demo               Just few static pages for checkout demo       Python web-app
-tests              Integration tests for all components          Python/Selenium web-app
 metabase           Data analysis web application (reports)       Java web-application
-wallet-web         Wallet web application                        RoR web-application
-banking-web        Online banking web application                RoR web-application
 settings           Applications for adjusting the settings       RoR web-application
                    of different providers                    
 core-sidekiq       Sidekiq job schedule for core web-service     RoR application
 business-docs      Public API documentation (rst based)          RoR web-application
 minio              Static content local storage                  Java web-application
 rate               Currency rate provider and cache              Python web-app
-rate-admin         Web interface and admin panel for rate        Python web-app
-card-storage       Encrypted persisten card-storage (not used)   RoR app
-mongo-express      Web interface to manage MongoDB               NodeJS app
 mongo              Mongo database for storing stats and rates    Mongo
                    commission rules and counts various counters
 postgres           PostgresDB - main data storage for            Postgres
