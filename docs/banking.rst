@@ -17,7 +17,8 @@ business           Public payment API and checkout form,         RoR web-applica
 core               Financial ledger for the operations,          RoR web-application
                    uses the logic of calculating commissions
                    and stores the wallet balances
-banking            Online banking web application,               RoR web-application
+banking            Online banking web application                RoR web-application
+ledger             Finance accounting and analytics application  RoR web-application
 business-sidekiq   Sidekiq job schedule for business web-service RoR application 
                    controls the change of transaction status
 core-docs          Public Core API documentation (rst based)     RoR web-application
