@@ -24,6 +24,7 @@ Welcome to reactive-pay's documentation!
    docs/continuation
    docs/wallet
    docs/pci_dss
+   docs/banking
    docs/authors
    docs/manual/business_accounts
 
