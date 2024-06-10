@@ -1,15 +1,15 @@
-System overview
+System Overview
 ===============
 
 Abstract
 --------
 
-ReactivePay is a number of product designated for financial institutions and fintech industry.
+ReactivePay is a suite of products designed for financial institutions and the fintech industry.
 
-All products created by ReactivePay are based on a Core system which basically is an immutable financial ledger. 
+All products created by ReactivePay are based on a Core system, which is essentially an immutable financial ledger.
 
-With this project we provide the development comunity with open architecure and service design for all of our products.
-Your team will be always the part of our developement comunity, join us by following the link:
+With this project, we provide the development community with an open architecture and service design for all of our products.
+Your team will always be part of our development community. Join us by following the link:
 
 https://reactivepay.com/
 
@@ -21,89 +21,88 @@ Our development cycle follows the best practices prescribed by the PCI DSS, incl
 - Central banks certifications
 - Regular performance/regression testing
 
-As for the development/deployment process our team is using the following tech stack:
+As for the development/deployment process, our team uses the following tech stack:
 
 - RoR, Python
-- Gitlab CI/CD
+- GitLab CI/CD
 - PostgreSQL, Mongo
 - Redis
 - Docker, Ansible
 
-All tools and libs included in the development process are regulary updated and audited.
+All tools and libraries included in the development process are regularly updated and audited.
 
-
-ReactivePay products and components
+ReactivePay Products and Components
 -----------------------------------
 
 - Digital banking solution
 - Internet acquiring platform
-- Core system  (financial ledger)
+- Core system (financial ledger)
 - Crypto processing solution (merchant services)
 - P2P payment platform
-- Emoney module (for EMI companies)
+- E-money module (for EMI companies)
 
 ReactivePay Web Applications
 ----------------------------
 
-1) Checkout payment form:
+1. Checkout Payment Form:
 
 - Desktop/Mobile friendly payment web-interface
 - Alternative payment methods selection
 - Checkout form customization
 
-2) Digital bank application for end-users
+2. Digital Bank Application for End-Users
 
 - Onboarding for personal and business accounts 
-- Agile questionaire for cusomter onboarding
+- Agile questionnaire for customer onboarding
 - KYC/KYB/AML modules
 - IBAN generation based on client's sort code
 - Multicurrency accounts
-- Internal ledger sub system
+- Internal ledger subsystem
 - External/Internal transfers
 - Currency exchange
-- Client based reports (Bank statements, commission reports, etc)  
+- Client-based reports (Bank statements, commission reports, etc.)
 
-3) Merhcant back office
+3. Merchant Back Office
 
 - Operation/Transaction historical data
 - Settlements
 - Dashboard with financial performance
 - Dispute management
-- Sub-merchants (web-sites)
-- Role model (multiple user's access)
+- Sub-merchants (websites)
+- Role model (multiple user access)
 
-4) Emoney web application for end-users
+4. E-money Web Application for End-Users
 
 - Client onboarding through Authentication/KYC/KYB processes
 - Internal money transfers
-- Wallet/Account top-up(s), withdrawals
+- Wallet/Account top-ups, withdrawals
 - Currency exchange 
 
-5) Flexy-guard admin application (Payment black lists/limits/routing/cascading)
+5. Flexy-Guard Admin Application (Payment Blacklists/Limits/Routing/Cascading)
 
-- A rule based engine for payment filtering
-- Managing white lists and  black lists
-- A rule based enging for payment routing
-- A rule based enging for payment traffic cascading
+- A rule-based engine for payment filtering
+- Managing whitelists and blacklists
+- A rule-based engine for payment routing
+- A rule-based engine for payment traffic cascading
 
-6) Flexy-commission admin application (Fees/Rates/Commissions/Tariffs)
+6. Flexy-Commission Admin Application (Fees/Rates/Commissions/Tariffs)
 
-- A rule based engine for making tariffs for any payment parameter
+- A rule-based engine for making tariffs for any payment parameter
 - Adding fixed fees for a payment
-- Setting min/max amount for commissions
+- Setting min/max amounts for commissions
 
-6) Admin web application for the system managers
+7. Admin Web Application for System Managers
 
 - Managing customers/accounts/merchants
 - Browsing/Managing transaction/payment lists
-- Setting up merchant connection with 3d party payment providers
+- Setting up merchant connections with third-party payment providers
 - Dispute processing
-- Handling KYC/KYB for the customers
-- Financial operations on the client accounts
+- Handling KYC/KYB for customers
+- Financial operations on client accounts
 - Handling settlements for merchants
 - Reconciliation management
 
-7) Business intellegence and reporting system
+8. Business Intelligence and Reporting System
 
 - Customizable reports/dashboards
 - Charts/Graphs
@@ -113,25 +112,25 @@ ReactivePay Web Applications
 Roles
 -----
 
-All modules support a role model for assign certain rights to the system users.
-Each role is coded withing the core and more roles could be added by modiying the code withing Core.
+All modules support a role model for assigning certain rights to system users.
+Each role is coded within the core, and more roles can be added by modifying the code within the Core.
 
-- Busness account (merchant), can use back-end and Public API
-- System manager has access to: Admin app, BI system, Flexy-commission and Flexy-guard apps, Settings app.
+- Business account (merchant) can use back-end and Public API
+- System manager has access to: Admin app, BI system, Flexy-Commission and Flexy-Guard apps, Settings app
 - Financial manager has access to: BI system, Admin app
-- Risk manager has access to: Admin app, BI system, Flexy-guard app, Settings app
+- Risk manager has access to: Admin app, BI system, Flexy-Guard app, Settings app
 - Technical support has access to: BI system
 
-Also roles have separated access within every app.
-For example: Manual refund function is available only for financial manager.
-Roles withing the app could be assigned via Admin app.
+Roles also have separate access within every app.
+For example: Manual refund function is available only for the financial manager.
+Roles within the app can be assigned via the Admin app.
 
-Also customers can create subusers within Merhcant back office app and assign a particular role for each subuser
+Customers can also create sub-users within the Merchant Back Office app and assign a particular role to each sub-user.
 
-Architecture and design
+Architecture and Design
 -----------------------
 
-1) Tech stack
+1. Tech Stack
 
 - Sidekiq
 - Docker
@@ -140,21 +139,21 @@ Architecture and design
 - Ruby on Rails, Python
 - PostgreSQL, MongoDB
 
-2) Micro services
+2. Microservices
 
 - Public API (business web service)
-- Core service (core web serivce)
+- Core service (core web service)
 - Settings (system and account settings service)
-- Flexy-guard (payment filtering/routing/cascading rule engine)
-- Flexy-commission (managing tariffs/fees web serivce)
-- Rates (wweb services for getting exchange rates from 3d parties)
+- Flexy-Guard (payment filtering/routing/cascading rule engine)
+- Flexy-Commission (managing tariffs/fees web service)
+- Rates (web services for getting exchange rates from third parties)
 - Static content storage
 
-Security and encryption
+Security and Encryption
 -----------------------
 
 - Public API requests are optionally secured with RSA-SHA256
-- Internal service communication secured by DMZ network architecture and service-to-service authentication
-- Sensitive data and customer private data both are encrypted in database and could be stored on dedicated location
+- Internal service communication is secured by DMZ network architecture and service-to-service authentication
+- Sensitive data and customer private data are both encrypted in the database and can be stored in a dedicated location
   according to local regulatory requirements
-- ReactivePay is PCI DSS compatible solution
+- ReactivePay is a PCI DSS compliant solution
