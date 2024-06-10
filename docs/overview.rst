@@ -4,7 +4,7 @@ System overview
 Abstract
 --------
 
-ReactivePay is a number of product designated for financail institutions and fintech industry.
+ReactivePay is a number of product designated for financial institutions and fintech industry.
 
 All products created by ReactivePay are based on a Core system which basically is an immutable financial ledger. 
 
